@@ -1,0 +1,104 @@
+/*#9FA8DA*/
+
+:root{
+	--primary-color: #9FA8DA;
+}
+
+html {
+	color: rgba(255,255,255,0.9);
+	background-color: #121212;
+	font-family: 'Roboto';
+}
+
+body{
+	margin: 0;
+}
+
+header {
+	overflow: hidden;
+	text-align: center;
+	background-color: #212121;
+	box-shadow: 0 0 10px black;
+	margin-bottom: 60px;
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+header > h1 {
+	color: var(--primary-color);
+	font-weight: 400;
+	user-select: none;
+	padding: 0 60px;
+}
+
+footer{
+	overflow: hidden;
+	margin-top: 100px;
+	padding: 20px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.01);
+	color: rgba(255,255,255,0.5);
+	vertical-align: middle;
+}
+
+a{
+	color: rgba(255,255,255,0.5);
+	text-decoration: none;
+	width: fit-content;
+	margin: 10px;
+}
+a:active, a:visited{
+	color: rgba(255,255,255,0.5);
+}
+a:hover{
+	color: var(--primary-color);
+}
+
+section{
+	color: rgba(255,255,255,0.60);
+	background-color: rgba(255,255,255,0.064);
+	border-radius: 3px;
+	border: 0px  solid rgba(0, 0, 0, 0);
+	box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+section > div{
+	padding: 2.5rem;
+}
+section > h2{
+	display: block;
+	margin: 0;
+	padding: 1.5rem 2.5rem;
+	font-weight: 300;
+	background: no-repeat fixed url("../img/card-background.png");
+	background-size: cover;
+	border-bottom: 1px solid var(--primary-color);
+	box-shadow: 0px 1px 2px -1px var(--primary-color);
+	color: var(--primary-color);
+}
+
+.container {
+	margin: 180px auto 100px auto;
+	max-width: 1280px;
+	min-height: calc(100vh - 340px);
+	width: 70%;
+}
+@media only screen and (max-width: 700px){
+	.container {
+		width: 100%;
+	}
+}
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: #2c2c2c;
+}
