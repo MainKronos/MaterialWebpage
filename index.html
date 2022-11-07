@@ -6,16 +6,7 @@
 		<meta name="description" content="Material">
 		<meta name="author" content="MainKronos">
 		
-
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		
 		<link rel="stylesheet" type="text/css" href="static/css/index.css" media="screen,projection"/>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
-		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
 		<title>Material</title>
 	</head>
@@ -23,7 +14,7 @@
 
 		
 		<header>
-			<h1>Material</h1>
+			<h1>Material Material Material Material Material Material</h1>
 		</header>
 		
 			<div class="container">
@@ -67,6 +58,97 @@
 					</div>
 				</section>
 
+				<section>
+					<h2>Title</h2>
+					<div>
+						<div>
+							<div class="content" style="grid-area: a;">
+								<h2>Livello del Log</h2>
+								
+								<label for="debug" class="radio">
+									<input type="radio" id="debug" name="LogLevel" value="DEBUG">
+									DEBUG
+									<span></span>
+								</label>
+								
+								<label for="info" class="radio">
+									<input type="radio" id="info" name="LogLevel" value="INFO">
+									INFO
+									<span></span>
+								</label>
+			
+								<label for="warning" class="radio">
+									<input type="radio" id="warning" name="LogLevel" value="WARNING">
+									WARNING
+									<span></span>
+								</label>
+			
+								<label for="error" class="radio">
+									<input type="radio" id="error" name="LogLevel" value="ERROR">
+									ERROR
+									<span></span>
+								</label>
+			
+								<label for="critical" class="radio">
+									<input type="radio" id="critical" name="LogLevel" value="CRITICAL">
+									CRITICAL
+									<span></span>
+								</label>
+							</div>
+			
+			
+							<div class="content" style="grid-area: e;">
+								<h2>Modalità Tag</h2>
+								
+								<label for="blacklist" class="radio">
+									<input type="radio" id="blacklist" name="TagsMode" value="BLACKLIST">
+									BLACKLIST
+									<span></span>
+								</label>
+								
+								<label for="whitelist" class="radio">
+									<input type="radio" id="whitelist" name="TagsMode" value="WHITELIST">
+									WHITELIST
+									<span></span>
+								</label>
+			
+								</label>
+							</div>
+			
+							<div class="content" style="grid-area: f;">
+								<h2>Intervallo Scan</h2>
+								<input type="range" id="ScanDelay" name="ScanDelay" min="30" max="300" value="30" step="15">
+								<label for="ScanDelay">30</label>
+							</div>
+						</div>
+
+						<div class="content">
+							<input type="text" name="title" id="title" placeholder="Sword Art Online" required>
+							<label for="title">Nome Anime</label>
+						</div>
+						<div class="content">
+							<input type="number" name="season" id="season" placeholder="1" min="0" step="1" required>
+							<label for="season">Stagione</label>
+							
+						</div>
+						<div class="content">
+							<label for="absolute" class="checkbox">
+								<input type="checkbox" id="absolute" name="absolute" value="false">
+								Absolute
+								<span></span>
+							</label>
+						</div>
+						<div class="content">
+							<input type="text" name="link" id="link" placeholder="https://www.animeworld.tv/play/sword-art-online.N0onT" pattern="^https:\/\/www\.animeworld\.tv\/play\/.+" required>
+							<label for="link">Link</label>
+						</div>
+						<div class="modal-footer">
+							<button type="reset" id="clear" class="btn">CLEAR</button>
+							<button type="submit" id="submit" class="btn">SUBMIT</button>
+						</div>
+					</div>
+				</section>
+
 				<!-- <content> -->
 
 			</div>
@@ -78,7 +160,6 @@
 		
 		
 		<!-- <script> -->
-		<script type="text/javascript" src="static/js/base/nav.js"></script>
 		<!-- <script> -->
 
 	</body>

@@ -1,104 +1,238 @@
-/*#9FA8DA*/
-
-:root{
-	--primary-color: #9FA8DA;
-}
-
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 html {
-	color: rgba(255,255,255,0.9);
-	background-color: #121212;
-	font-family: 'Roboto';
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #121212;
+  font-family: "Roboto";
 }
 
-body{
-	margin: 0;
+body {
+  margin: 0;
 }
 
 header {
-	overflow: hidden;
-	text-align: center;
-	background-color: #212121;
-	box-shadow: 0 0 10px black;
-	margin-bottom: 60px;
-	z-index: 1;
-	position: fixed;
-	top: 0;
-	width: 100%;
+  overflow: hidden;
+  text-align: center;
+  background-color: #212121;
+  box-shadow: 0 0 10px black;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-
 header > h1 {
-	color: var(--primary-color);
-	font-weight: 400;
-	user-select: none;
-	padding: 0 60px;
+  color: #9FA8DA;
+  font-weight: 400;
+  user-select: none;
+  padding: 0 60px;
 }
 
-footer{
-	overflow: hidden;
-	margin-top: 100px;
-	padding: 20px;
-	text-align: center;
-	background-color: rgba(255,255,255,0.01);
-	color: rgba(255,255,255,0.5);
-	vertical-align: middle;
+footer {
+  overflow: hidden;
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.01);
+  color: rgba(255, 255, 255, 0.5);
+  vertical-align: middle;
 }
 
-a{
-	color: rgba(255,255,255,0.5);
-	text-decoration: none;
-	width: fit-content;
-	margin: 10px;
+a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  width: fit-content;
+  margin: 10px;
 }
-a:active, a:visited{
-	color: rgba(255,255,255,0.5);
+a:active, a:visited {
+  color: rgba(255, 255, 255, 0.5);
 }
-a:hover{
-	color: var(--primary-color);
+a:hover {
+  color: #9FA8DA;
 }
 
-section{
-	color: rgba(255,255,255,0.60);
-	background-color: rgba(255,255,255,0.064);
-	border-radius: 3px;
-	border: 0px  solid rgba(0, 0, 0, 0);
-	box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+section {
+  background-color: #212121;
+  border-radius: 3px;
+  border: 0px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
 }
-section > div{
-	padding: 2.5rem;
+section > div {
+  padding: 2.5rem;
 }
-section > h2{
-	display: block;
-	margin: 0;
-	padding: 1.5rem 2.5rem;
-	font-weight: 300;
-	background: no-repeat fixed url("../img/card-background.png");
-	background-size: cover;
-	border-bottom: 1px solid var(--primary-color);
-	box-shadow: 0px 1px 2px -1px var(--primary-color);
-	color: var(--primary-color);
+section > h2 {
+  display: block;
+  margin: 0;
+  padding: 1.5rem 2.5rem;
+  font-weight: 300;
+  background: no-repeat fixed url("../img/card-background.png");
+  background-size: cover;
+  border-bottom: 1px solid #9FA8DA;
+  box-shadow: 0px 1px 2px -1px #9FA8DA;
+  color: #9FA8DA;
 }
 
 .container {
-	margin: 180px auto 100px auto;
-	max-width: 1280px;
-	min-height: calc(100vh - 340px);
-	width: 70%;
+  margin: 180px auto 100px auto;
+  max-width: 1280px;
+  min-height: calc(100vh - 340px);
+  width: 70%;
 }
-@media only screen and (max-width: 700px){
-	.container {
-		width: 100%;
-	}
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /* SCROLLBAR */
-
-/* width */
 ::-webkit-scrollbar {
-	width: 5px;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #2c2c2c;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-	border-radius: 2px;
-	background-color: #2c2c2c;
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
+input[type=number], input[type=text] {
+  color: rgba(255, 255, 255, 0.7);
+  background: none;
+  font-size: 18px;
+  padding: 10px;
+  width: calc(100% - 44px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  transition: border 0.3s;
+  display: block;
+  margin: 10px;
+  appearance: textfield;
+}
+input[type=number]:disabled, input[type=text]:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+input[type=number]::placeholder, input[type=text]::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+input[type=number]:focus, input[type=text]:focus {
+  outline: none;
+  border: 2px solid #9FA8DA;
+}
+input[type=number] ~ label, input[type=text] ~ label {
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  top: 17px;
+  left: 35px;
+  background-color: #212121;
+  margin: 0 0 55px;
+  user-select: none;
+}
+input[type=range] {
+  vertical-align: middle;
+  appearance: none;
+  width: calc(100% - 40px);
+  height: 5px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #9FA8DA;
+  cursor: pointer;
+  outline: 2px solid #212121;
+}
+input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #9FA8DA;
+  cursor: pointer;
+  outline: 2px solid #212121;
+}
+input[type=file] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+input[type=checkbox] {
+  opacity: 0;
+}
+label:has(input[type=checkbox]) {
+  position: relative;
+  padding: 0 20px;
+  font-size: 18px;
+  user-select: none;
+  cursor: pointer;
+  margin: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input[type=checkbox] + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+input[type=checkbox] + span::after {
+  font-family: "Material Icons";
+  content: "";
+  color: white;
+}
+input[type=checkbox]:checked + span {
+  background-color: #9FA8DA;
+}
+input[type=checkbox]:checked + span::after {
+  content: "\e5ca";
+}
+input[type=radio] {
+  opacity: 0;
+}
+label:has(input[type=radio]) {
+  position: relative;
+  padding: 1px 20px;
+  font-size: 15px;
+  user-select: none;
+  cursor: pointer;
+  margin: 7px;
+  display: block;
+}
+
+input[type=radio] + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+input[type=radio] + span:before {
+  content: " ";
+  background-color: transparent;
+  margin: 1px;
+  border: 2.5px solid #212121;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: block;
+}
+input[type=radio]:checked + span {
+  background-color: #9FA8DA;
+}
+
+/*# sourceMappingURL=index.css.map */

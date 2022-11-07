@@ -1,0 +1,103 @@
+@use 'var';
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+html{
+	color: rgba(255,255,255,0.60);
+	background-color: #121212;
+	font-family: 'Roboto';
+}
+
+body{
+	margin: 0;
+}
+
+header {
+	overflow: hidden;
+	text-align: center;
+	background-color: var.$background-color;
+	box-shadow: 0 0 10px black;
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	> h1 {
+		color: var.$primary-color;
+		font-weight: 400;
+		user-select: none;
+		padding: 0 60px;
+	}
+}
+
+footer{
+	overflow: hidden;
+	margin-top: 100px;
+	padding: 20px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.01);
+	color: rgba(255,255,255,0.5);
+	vertical-align: middle;
+}
+
+a{
+	color: rgba(255,255,255,0.5);
+	text-decoration: none;
+	width: fit-content;
+	margin: 10px;
+
+	&:active, &:visited{
+		color: rgba(255,255,255,0.5);
+	}
+
+	&:hover{
+		color: var.$primary-color;
+	}
+}
+
+section{
+	background-color: var.$background-color;
+	border-radius: 3px;
+	border: 0px solid rgba(0, 0, 0, 0);
+	box-shadow: 0 2px 2px 0 rgba(0 0 0 / 14%), 0 3px 1px -2px rgba(0 0 0 / 12%), 0 1px 5px 0 rgba(0 0 0 / 20%);
+	margin: 50px auto;
+
+	> div{
+		padding: 2.5rem;
+	}
+
+	> h2{
+		display: block;
+		margin: 0;
+		padding: 1.5rem 2.5rem;
+		font-weight: 300;
+		background: no-repeat fixed url("../img/card-background.png");
+		background-size: cover;
+		border-bottom: 1px solid var.$primary-color;
+		box-shadow: 0px 1px 2px -1px var.$primary-color;
+		color: var.$primary-color;
+	}
+}
+
+.container {
+	margin: 180px auto 100px auto;
+	max-width: 1280px;
+	min-height: calc(100vh - 340px);
+	width: 70%;
+
+	@media only screen and (max-width: 700px){
+		width: 100%;
+	}
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+	width: 5px;
+
+	&-thumb{
+		border-radius: 2px;
+		background-color: #2c2c2c;
+	}
+}
+
+@import 'input';
