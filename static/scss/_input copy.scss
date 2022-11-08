@@ -2,15 +2,13 @@
 
 
 input{
-
-
-
 	&::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
 		appearance: none;
 		margin: 0;
 	}
 
 	&[type=number], &[type=text]{
+		color: rgba(255,255,255,0.7);
 		background: none;
 		font-size: 18px;
 		padding: 10px;
@@ -35,7 +33,7 @@ input{
 			border: 2px solid var.$primary-color;
 		}
 
-		+ label {
+		~ label {
 			padding: 0 10px;
 			color: rgba(255,255,255,0.7);
 			font-size: 14px;
@@ -57,7 +55,6 @@ input{
 		border-radius: 5px;
 		background: rgba(255,255,255,0.2);
 		outline: none;
-		margin: 20px 0;
 
 		&::-webkit-slider-thumb{
 			appearance: none;
@@ -77,14 +74,6 @@ input{
 			cursor: pointer;
 			outline: 2px solid var.$background-color;
 		}
-
-		+ label {
-			vertical-align: middle;
-			float: right;
-			padding: 13px 10px;
-			font-size: 14px;
-			font-weight: normal;
-		}
 	}
 
 	&[type=file]{
@@ -95,76 +84,81 @@ input{
 	}
 
 	&[type=checkbox]{
-		@extend %custom-input;
+		opacity: 0;
 
-		+ span{
-			border-radius: 4px;
+		@at-root label:has(&){
+			position: relative;
+			padding: 0 20px;
+			font-size: 18px;
+			user-select: none;
+			cursor: pointer;
+			margin: 10px;
+			color: rgba(255,255,255,0.7);
 		}
 
-		&:checked + span::before{
-			content: "\e5ca";
+		+ span{
+			position: absolute; 
+			top: 0;
+			left: 0; 
+			height: 18px;
+			width: 18px;
+			background-color: transparent;
+			border: 2px solid rgba(255,255,255,0.2);
+			border-radius: 4px;
+
+			&::after{
+				font-family: "Material Icons";
+				content: "";
+				color: white;
+			}
+		}
+
+		&:checked + span{
+			background-color: var.$primary-color;
+
+			&::after{
+				content: "\e5ca";
+			}
 		}
 	}
 
 	&[type=radio]{
-		@extend %custom-input;
+		opacity: 0;
+
+		@at-root label:has(&){
+			position: relative;
+			padding: 0px 20px;
+			font-size: 18px;
+			user-select: none;
+			cursor: pointer;
+			margin: 10px;
+			display: block;
+		}
 
 		+ span{
+			position: absolute; 
+			top: 0;
+			left: 0; 
+			height: 18px;
+			width: 18px;
+			background-color: transparent;
+			border: 2px solid rgba(255,255,255,0.2);
 			border-radius: 50%;
 
 			&:before{
+				content: " ";
+				background-color: transparent;
 				margin: 2px;
 				border: 2.5px solid var.$background-color;
 				height: 9px;
 				width: 9px;
 				border-radius: 50%;
+				display: block;
 			}
 		}
-	}
-}
 
-%custom-input{
-	opacity: 0;
-	width: 0;
-	height: 0;
-	visibility: hidden;
-
-	@at-root label:has(&){
-		position: relative;
-		padding: 0 20px;
-		font-size: 18px;
-		user-select: none;
-		cursor: pointer;
-		margin: 10px;
-		color: rgba(255,255,255,0.7);
-		display: block;
-		top: 0;
-		left: 0;
-	}
-
-	@at-root label:has(&:disabled){
-		color: rgba(255,255,255,0.2);
-	}
-
-	+ span{
-		position: absolute; 
-		top: 0;
-		left: 0; 
-		height: 18px;
-		width: 18px;
-		background-color: transparent;
-		border: 2px solid rgba(255,255,255,0.2);
-		
-		&::before{
-			font-family: "Material Icons";
-			content: " ";
-			color: white;
-			background-color: transparent;
-			display: block;
+		&:checked + span {
+			background-color: var.$primary-color;
 		}
-	}
-
-	&:checked + span {
-		background-color: var.$primary-color;
 	}
 }

@@ -98,7 +98,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   margin: 0;
 }
 input[type=number], input[type=text] {
-  color: rgba(255, 255, 255, 0.7);
   background: none;
   font-size: 18px;
   padding: 10px;
@@ -120,7 +119,7 @@ input[type=number]:focus, input[type=text]:focus {
   outline: none;
   border: 2px solid #9FA8DA;
 }
-input[type=number] ~ label, input[type=text] ~ label {
+input[type=number] + label, input[type=text] + label {
   padding: 0 10px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
@@ -140,6 +139,7 @@ input[type=range] {
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.2);
   outline: none;
+  margin: 20px 0;
 }
 input[type=range]::-webkit-slider-thumb {
   appearance: none;
@@ -158,16 +158,43 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
   outline: 2px solid #212121;
 }
+input[type=range] + label {
+  vertical-align: middle;
+  float: right;
+  padding: 13px 10px;
+  font-size: 14px;
+  font-weight: normal;
+}
 input[type=file] {
   opacity: 0;
   width: 0;
   height: 0;
   visibility: hidden;
 }
-input[type=checkbox] {
-  opacity: 0;
+input[type=checkbox] + span {
+  border-radius: 4px;
 }
-label:has(input[type=checkbox]) {
+input[type=checkbox]:checked + span::before {
+  content: "\e5ca";
+}
+input[type=radio] + span {
+  border-radius: 50%;
+}
+input[type=radio] + span:before {
+  margin: 2px;
+  border: 2.5px solid #212121;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+}
+
+input[type=checkbox], input[type=radio] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+label:has(input[type=checkbox], input[type=radio]) {
   position: relative;
   padding: 0 20px;
   font-size: 18px;
@@ -175,9 +202,16 @@ label:has(input[type=checkbox]) {
   cursor: pointer;
   margin: 10px;
   color: rgba(255, 255, 255, 0.7);
+  display: block;
+  top: 0;
+  left: 0;
 }
 
-input[type=checkbox] + span {
+label:has(input[type=checkbox]:disabled, input[type=radio]:disabled) {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+input[type=checkbox] + span, input[type=radio] + span {
   position: absolute;
   top: 0;
   left: 0;
@@ -185,53 +219,15 @@ input[type=checkbox] + span {
   width: 18px;
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
 }
-input[type=checkbox] + span::after {
+input[type=checkbox] + span::before, input[type=radio] + span::before {
   font-family: "Material Icons";
-  content: "";
-  color: white;
-}
-input[type=checkbox]:checked + span {
-  background-color: #9FA8DA;
-}
-input[type=checkbox]:checked + span::after {
-  content: "\e5ca";
-}
-input[type=radio] {
-  opacity: 0;
-}
-label:has(input[type=radio]) {
-  position: relative;
-  padding: 1px 20px;
-  font-size: 15px;
-  user-select: none;
-  cursor: pointer;
-  margin: 7px;
-  display: block;
-}
-
-input[type=radio] + span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 15px;
-  width: 15px;
-  background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-}
-input[type=radio] + span:before {
   content: " ";
+  color: white;
   background-color: transparent;
-  margin: 1px;
-  border: 2.5px solid #212121;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
   display: block;
 }
-input[type=radio]:checked + span {
+input[type=checkbox]:checked + span, input[type=radio]:checked + span {
   background-color: #9FA8DA;
 }
 
