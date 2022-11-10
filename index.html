@@ -25,7 +25,7 @@
 						<h2>Title</h2>
 						<div>
 
-							<input type="text" name="linkw" id="link" oninput="input['for=linkw'].innerText = this.value" placeholder="https://www.animeworld.tv/play/sword-art-online.N0onT" pattern="^https:\/\/www\.animeworld\.tv\/play\/.+" required>
+							<input type="text" name="linkw" id="linkw" oninput="input['for=linkw'].innerText = this.value" placeholder="https://www.animeworld.tv/play/sword-art-online.N0onT" pattern="^https:\/\/www\.animeworld\.tv\/play\/.+" required>
 								<label for="linkw">Link</label>
 									
 							<label for="debug">
@@ -61,8 +61,8 @@
 							<input type="range" id="ScanDelay" name="ScanDelay" min="30" max="300" value="30" step="15" disabled>
 							<label for="ScanDelay">30</label>
 
-							<input type="range" id="ScanDelay" name="ScanDelay" min="30" max="300" value="30" step="15">
-							<label for="ScanDelay">30</label>
+							<input type="range" id="ScanDelay2" name="ScanDelay2" min="30" max="300" value="30" step="15" oninput="this.nextElementSibling.innerText=this.value">
+							<label for="ScanDelay2">30</label>
 							
 							<input type="text" name="title" id="title" placeholder="Sword Art Online" required>
 							<label for="title">Nome Anime</label>
@@ -70,12 +70,12 @@
 							<input type="number" name="season" id="season" placeholder="1" min="0" step="1" required>
 							<label for="season">Stagione</label>
 							<label for="absolute">
-								<input type="checkbox" name="absolute" value="false">
+								<input type="checkbox" id="absolute" name="absolute" value="false">
 								Absolute
 								<span></span>
 							</label>
-							<label for="absolute">
-								<input type="checkbox" id="absolute" name="absolute2" value="false" disabled>
+							<label for="absolute2">
+								<input type="checkbox" id="absolute2" name="absolute2" value="false" disabled>
 								Absolute
 								<span></span>
 							</label>
@@ -83,7 +83,7 @@
 							<input type="text" name="link" id="link" placeholder="https://www.animeworld.tv/play/sword-art-online.N0onT" pattern="^https:\/\/www\.animeworld\.tv\/play\/.+" disabled>
 							<label for="link">Link</label>
 
-							<button type="reset" id="clear" class="btn">CLEAR</button>
+							<button type="reset" id="clear" class="btn" disabled>CLEAR</button>
 							<button type="submit" id="submit" class="btn">SUBMIT</button>
 						</div>
 					</section>

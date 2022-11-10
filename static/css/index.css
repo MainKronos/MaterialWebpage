@@ -102,34 +102,34 @@ input[type=number], input[type=text] {
   font-size: 18px;
   padding: 10px;
   width: calc(100% - 44px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.7);
+  border: 2px solid #4f4f4f;
+  color: #bababa;
   border-radius: 4px;
-  transition: border 0.3s;
   display: block;
-  margin: 10px;
+  margin: 20px 0 10px 0;
   appearance: textfield;
 }
 input[type=number]:disabled, input[type=text]:disabled {
-  border: 2px solid #1a1a1a;
+  border: 2px solid #191919;
 }
 input[type=number]::placeholder, input[type=text]::placeholder {
-  color: rgba(255, 255, 255, 0.2);
+  color: #4f4f4f;
 }
 input[type=number]:focus, input[type=text]:focus {
   outline: none;
   border: 2px solid #9FA8DA;
 }
+input[type=number]:focus + label, input[type=text]:focus + label {
+  color: #9FA8DA;
+}
 input[type=number] + label, input[type=text] + label {
   padding: 0 10px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #4f4f4f;
   font-size: 14px;
   font-weight: normal;
   position: absolute;
-  top: 17px;
-  left: 35px;
   background-color: #212121;
-  margin: 0 0 55px;
+  margin: -65px 25px;
   user-select: none;
 }
 input[type=range] {
@@ -138,15 +138,18 @@ input[type=range] {
   width: calc(100% - 40px);
   height: 5px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2);
+  background: #4f4f4f;
   outline: none;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 input[type=range]:disabled {
-  background: #1a1a1a;
+  background: #191919;
 }
 input[type=range]:disabled::-webkit-slider-thumb {
-  background: #545454;
+  background: #4f4f4f;
+}
+input[type=range]:disabled + label {
+  color: #4f4f4f;
 }
 input[type=range]::-webkit-slider-thumb {
   appearance: none;
@@ -158,9 +161,12 @@ input[type=range]::-webkit-slider-thumb {
   outline: 2px solid #212121;
 }
 input[type=range] + label {
+  color: #bababa;
   vertical-align: middle;
+  text-align: center;
   float: right;
-  padding: 13px 10px;
+  padding: 8px 0;
+  width: 35px;
   font-size: 14px;
   font-weight: normal;
 }
@@ -191,7 +197,6 @@ input[type=checkbox], input[type=radio] {
   opacity: 0;
   width: 0;
   height: 0;
-  visibility: hidden;
 }
 label:has(input[type=checkbox], input[type=radio]) {
   position: relative;
@@ -199,15 +204,13 @@ label:has(input[type=checkbox], input[type=radio]) {
   font-size: 18px;
   user-select: none;
   cursor: pointer;
-  margin: 10px;
-  color: rgba(255, 255, 255, 0.7);
+  margin: 10px 0;
+  color: #bababa;
   display: block;
-  top: 0;
-  left: 0;
 }
 
 label:has(input[type=checkbox]:disabled, input[type=radio]:disabled) {
-  color: rgba(255, 255, 255, 0.2);
+  color: #4f4f4f;
 }
 
 input[type=checkbox] + span, input[type=radio] + span {
@@ -217,10 +220,11 @@ input[type=checkbox] + span, input[type=radio] + span {
   height: 18px;
   width: 18px;
   background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #4f4f4f;
 }
 input[type=checkbox] + span::before, input[type=radio] + span::before {
   font-family: "Material Icons";
+  font-weight: 500;
   content: " ";
   color: white;
   background-color: transparent;
@@ -228,6 +232,29 @@ input[type=checkbox] + span::before, input[type=radio] + span::before {
 }
 input[type=checkbox]:checked + span, input[type=radio]:checked + span {
   background-color: #9FA8DA;
+  border-color: #9FA8DA;
+}
+input[type=checkbox]:disabled + span, input[type=radio]:disabled + span {
+  border-color: #191919;
+}
+
+button {
+  width: 200px;
+  margin: 10px 0;
+  border: 2px solid #4f4f4f;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #9FA8DA;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+}
+button:hover {
+  border-color: #9FA8DA;
+}
+button:disabled {
+  color: #4f4f4f;
+  border-color: #191919;
 }
 
 /*# sourceMappingURL=index.css.map */
