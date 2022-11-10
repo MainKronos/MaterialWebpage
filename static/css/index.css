@@ -103,6 +103,7 @@ input[type=number], input[type=text] {
   padding: 10px;
   width: calc(100% - 44px);
   border: 2px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
   border-radius: 4px;
   transition: border 0.3s;
   display: block;
@@ -110,7 +111,7 @@ input[type=number], input[type=text] {
   appearance: textfield;
 }
 input[type=number]:disabled, input[type=text]:disabled {
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  border: 2px solid #1a1a1a;
 }
 input[type=number]::placeholder, input[type=text]::placeholder {
   color: rgba(255, 255, 255, 0.2);
@@ -141,16 +142,14 @@ input[type=range] {
   outline: none;
   margin: 20px 0;
 }
+input[type=range]:disabled {
+  background: #1a1a1a;
+}
+input[type=range]:disabled::-webkit-slider-thumb {
+  background: #545454;
+}
 input[type=range]::-webkit-slider-thumb {
   appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #9FA8DA;
-  cursor: pointer;
-  outline: 2px solid #212121;
-}
-input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 20px;
   border-radius: 50%;

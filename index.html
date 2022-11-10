@@ -25,7 +25,7 @@
 						<h2>Title</h2>
 						<div>
 
-							<input type="text" name="linkw" id="link" placeholder="https://www.animeworld.tv/play/sword-art-online.N0onT" pattern="^https:\/\/www\.animeworld\.tv\/play\/.+" required>
+							<input type="text" name="linkw" id="link" oninput="input['for=linkw'].innerText = this.value" placeholder="https://www.animeworld.tv/play/sword-art-online.N0onT" pattern="^https:\/\/www\.animeworld\.tv\/play\/.+" required>
 								<label for="linkw">Link</label>
 									
 							<label for="debug">
@@ -58,7 +58,7 @@
 								<span></span>
 							</label>				
 			
-							<input type="range" id="ScanDelay" name="ScanDelay" min="30" max="300" value="30" step="15">
+							<input type="range" id="ScanDelay" name="ScanDelay" min="30" max="300" value="30" step="15" disabled>
 							<label for="ScanDelay">30</label>
 
 							<input type="range" id="ScanDelay" name="ScanDelay" min="30" max="300" value="30" step="15">
@@ -80,7 +80,7 @@
 								<span></span>
 							</label>
 
-							<input type="text" name="link" id="link" placeholder="https://www.animeworld.tv/play/sword-art-online.N0onT" pattern="^https:\/\/www\.animeworld\.tv\/play\/.+" required>
+							<input type="text" name="link" id="link" placeholder="https://www.animeworld.tv/play/sword-art-online.N0onT" pattern="^https:\/\/www\.animeworld\.tv\/play\/.+" disabled>
 							<label for="link">Link</label>
 
 							<button type="reset" id="clear" class="btn">CLEAR</button>

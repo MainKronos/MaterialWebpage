@@ -3,8 +3,6 @@
 
 input{
 
-
-
 	&::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
 		appearance: none;
 		margin: 0;
@@ -16,6 +14,7 @@ input{
 		padding: 10px;
 		width: calc(100% - 44px);
 		border: 2px solid rgba(255,255,255,0.2);
+		color: rgba(255,255,255,0.7);
 		border-radius: 4px;
 		transition: border 0.3s;
 		display: block;
@@ -23,7 +22,7 @@ input{
 		appearance: textfield;
 
 		&:disabled{
-			border: 2px solid rgba(0,0,0,0.2);
+			border: 2px solid darken(var.$background-color, 2.6%);
 		}
 
 		&::placeholder{
@@ -59,17 +58,18 @@ input{
 		outline: none;
 		margin: 20px 0;
 
-		&::-webkit-slider-thumb{
-			appearance: none;
-			width: 20px;
-			height: 20px;
-			border-radius: 50%;
-			background: var.$primary-color;
-			cursor: pointer;
-			outline: 2px solid var.$background-color;
+		&:disabled{
+			background: darken(var.$background-color, 2.6%);
+
+
+			&::-webkit-slider-thumb{
+				// background: rgba(255,255,255,0.2);
+				background: lighten(var.$background-color, 20%);
+			}
 		}
 
-		&::-moz-range-thumb{
+		&::-webkit-slider-thumb{
+			appearance: none;
 			width: 20px;
 			height: 20px;
 			border-radius: 50%;
