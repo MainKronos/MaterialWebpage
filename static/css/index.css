@@ -97,41 +97,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
-input[type=number], input[type=text] {
-  background: none;
-  font-size: 18px;
-  padding: 10px;
-  width: calc(100% - 44px);
-  border: 2px solid #4f4f4f;
-  color: #bababa;
-  border-radius: 4px;
-  display: block;
-  margin: 20px 0 10px 0;
-  appearance: textfield;
-}
-input[type=number]:disabled, input[type=text]:disabled {
-  border: 2px solid #191919;
-}
-input[type=number]::placeholder, input[type=text]::placeholder {
-  color: #4f4f4f;
-}
-input[type=number]:focus, input[type=text]:focus {
-  outline: none;
-  border: 2px solid #9FA8DA;
-}
-input[type=number]:focus + label, input[type=text]:focus + label {
-  color: #9FA8DA;
-}
-input[type=number] + label, input[type=text] + label {
-  padding: 0 10px;
-  color: #4f4f4f;
-  font-size: 14px;
-  font-weight: normal;
-  position: absolute;
-  background-color: #212121;
-  margin: -65px 25px;
-  user-select: none;
-}
 input[type=range] {
   vertical-align: middle;
   appearance: none;
@@ -191,6 +156,42 @@ input[type=radio] + span:before {
   height: 9px;
   width: 9px;
   border-radius: 50%;
+}
+
+input[type=number], input[type=text], input[type=email], input[type=date] {
+  background: none;
+  font-size: 18px;
+  padding: 10px;
+  width: calc(100% - 44px);
+  border: 2px solid #4f4f4f;
+  color: #bababa;
+  border-radius: 4px;
+  display: block;
+  margin: 20px 0 10px 0;
+  appearance: textfield;
+}
+input[type=number]:disabled, input[type=text]:disabled, input[type=email]:disabled, input[type=date]:disabled {
+  border: 2px solid #191919;
+}
+input[type=number]::placeholder, input[type=text]::placeholder, input[type=email]::placeholder, input[type=date]::placeholder {
+  color: #4f4f4f;
+}
+input[type=number]:focus, input[type=text]:focus, input[type=email]:focus, input[type=date]:focus {
+  outline: none;
+  border: 2px solid #9FA8DA;
+}
+input[type=number]:focus + label, input[type=text]:focus + label, input[type=email]:focus + label, input[type=date]:focus + label {
+  color: #9FA8DA;
+}
+input[type=number] + label, input[type=text] + label, input[type=email] + label, input[type=date] + label {
+  padding: 0 10px;
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  background-color: #212121;
+  margin: -65px 25px;
+  user-select: none;
 }
 
 input[type=checkbox], input[type=radio] {

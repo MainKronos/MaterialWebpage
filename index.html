@@ -25,63 +25,57 @@
 						<h2>Title</h2>
 						<div>
 
-							<input type="text" name="linkw" id="linkw" oninput="input['for=linkw'].innerText = this.value" placeholder="https://www.animeworld.tv/play/sword-art-online.N0onT" pattern="^https:\/\/www\.animeworld\.tv\/play\/.+" required>
-								<label for="linkw">Link</label>
-									
-							<label for="debug">
-								<input type="radio" id="debug" name="LogLevel" value="DEBUG">
-								DEBUG
-								<span></span>
-							</label>
-							
-							<label for="info">
-								<input type="radio" id="info" name="LogLevel" value="INFO">
-								INFO
-								<span></span>
-							</label>
-		
-							<label for="warning">
-								<input type="radio" id="warning" name="LogLevel" value="WARNING">
-								WARNING
-								<span></span>
-							</label>
-		
-							<label for="error">
-								<input type="radio" id="error" name="LogLevel" value="ERROR">
-								ERROR
-								<span></span>
-							</label>
-		
-							<label for="critical">
-								<input type="radio" id="critical" name="LogLevel" value="CRITICAL" disabled>
-								CRITICAL
-								<span></span>
-							</label>				
-			
-							<input type="range" id="ScanDelay" name="ScanDelay" min="30" max="300" value="30" step="15" disabled>
-							<label for="ScanDelay">30</label>
+							<input type="text" name="text" id="text" placeholder="text">
+							<label for="text">text</label>
 
+							<input type="text" name="text_disabled" id="text_disabled" placeholder="text_disabled" disabled>
+							<label for="text_disabled">text_disabled</label>
+									
+							<label for="radio1">
+								<input type="radio" id="radio1" name="radio" value="radio1">
+								radio1
+								<span></span>
+							</label>
+							<label for="radio2">
+								<input type="radio" id="radio2" name="radio" value="radio2">
+								radio2
+								<span></span>
+							</label>
+		
+							<label for="radio_disabled">
+								<input type="radio" id="radio_disabled" name="radio" value="radio_disabled" disabled>
+								radio_disabled
+								<span></span>
+							</label>	
+							
 							<input type="range" id="ScanDelay2" name="ScanDelay2" min="30" max="300" value="30" step="15" oninput="this.nextElementSibling.innerText=this.value">
 							<label for="ScanDelay2">30</label>
-							
-							<input type="text" name="title" id="title" placeholder="Sword Art Online" required>
-							<label for="title">Nome Anime</label>
+			
+							<input type="range" id="ScanDelay" name="ScanDelay" min="30" max="300" value="30" step="15" oninput="this.nextElementSibling.innerText=this.value" disabled>
+							<label for="ScanDelay">30</label>							
 
-							<input type="number" name="season" id="season" placeholder="1" min="0" step="1" required>
-							<label for="season">Stagione</label>
-							<label for="absolute">
-								<input type="checkbox" id="absolute" name="absolute" value="false">
-								Absolute
+							<input type="number" name="number" id="number" placeholder="1" min="0" step="1" >
+							<label for="number">number</label>
+
+							<input type="number" name="number_disabled" id="number_disabled" placeholder="1" min="0" step="1" disabled>
+							<label for="number_disabled">number_disabled</label>
+
+							<label for="checkbox">
+								<input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+								checkbox
 								<span></span>
 							</label>
-							<label for="absolute2">
-								<input type="checkbox" id="absolute2" name="absolute2" value="false" disabled>
-								Absolute
+
+							<label for="checkbox_disabled">
+								<input type="checkbox" id="checkbox_disabled" name="checkbox_disabled" value="checkbox_disabled" disabled>
+								checkbox_disabled
 								<span></span>
 							</label>
 
-							<input type="text" name="link" id="link" placeholder="https://www.animeworld.tv/play/sword-art-online.N0onT" pattern="^https:\/\/www\.animeworld\.tv\/play\/.+" disabled>
-							<label for="link">Link</label>
+							<input type="date" name="date" id="date" >
+							<label for="date">date</label>
+
+							<!-- <input type="file" name="file" id="file"> -->
 
 							<button type="reset" id="clear" class="btn" disabled>CLEAR</button>
 							<button type="submit" id="submit" class="btn">SUBMIT</button>

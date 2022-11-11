@@ -7,49 +7,20 @@ input{
 		margin: 0;
 	}
 
-	&[type=number], &[type=text]{
-		background: none;
-		font-size: 18px;
-		padding: 10px;
-		width: calc(100% - 44px);
-		border: 2px solid lighten(var.$background-color, 18%);
-		color: lighten(var.$background-color, 60%);
-		border-radius: 4px;
-		display: block;
-		margin: 20px 0 10px 0;
-		appearance: textfield;
+	&[type=number]{
+		@extend %text-input
+	}
 
-		&:disabled{
-			border: 2px solid darken(var.$background-color, 3%);
+	&[type=text]{
+		@extend %text-input
+	}
 
-		}
-
-		&::placeholder{
-			color: lighten(var.$background-color, 18%);
-		}
-
-		&:focus{
-			outline: none;
-			border: 2px solid var.$primary-color;
-
-			+ label {
-				color: var.$primary-color;
-			}
-		}
-
-		+ label {
-			padding: 0 10px;
-			color: lighten(var.$background-color, 18%);
-			font-size: 14px;
-			font-weight: normal;
-			position: absolute;
-			// top: 17px;
-			// left: 35px;
-
-			background-color: var.$background-color;
-			margin: -65px 25px;
-			user-select: none;
-		}
+	&[type=email]{
+		@extend %text-input
+	}
+	
+	&[type=date]{
+		@extend %text-input
 	}
 
 	&[type=range]{
@@ -104,7 +75,7 @@ input{
 	}
 
 	&[type=checkbox]{
-		@extend %custom-input;
+		@extend %switchable-input;
 
 		+ span{
 			border-radius: 4px;
@@ -116,7 +87,7 @@ input{
 	}
 
 	&[type=radio]{
-		@extend %custom-input;
+		@extend %switchable-input;
 
 		+ span{
 			border-radius: 50%;
@@ -132,7 +103,49 @@ input{
 	}
 }
 
-%custom-input{
+%text-input{
+	background: none;
+	font-size: 18px;
+	padding: 10px;
+	width: calc(100% - 44px);
+	border: 2px solid lighten(var.$background-color, 18%);
+	color: lighten(var.$background-color, 60%);
+	border-radius: 4px;
+	display: block;
+	margin: 20px 0 10px 0;
+	appearance: textfield;
+
+	&:disabled{
+		border: 2px solid darken(var.$background-color, 3%);
+
+	}
+
+	&::placeholder{
+		color: lighten(var.$background-color, 18%);
+	}
+
+	&:focus{
+		outline: none;
+		border: 2px solid var.$primary-color;
+
+		+ label {
+			color: var.$primary-color;
+		}
+	}
+
+	+ label {
+		padding: 0 10px;
+		color: lighten(var.$background-color, 18%);
+		font-size: 14px;
+		font-weight: normal;
+		position: absolute;
+		background-color: var.$background-color;
+		margin: -65px 25px;
+		user-select: none;
+	}
+}
+
+%switchable-input{
 	opacity: 0;
 	width: 0;
 	height: 0;
