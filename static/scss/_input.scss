@@ -8,19 +8,31 @@ input{
 	}
 
 	&[type=number]{
-		@extend %text-input
+		@extend %text-input;
 	}
 
 	&[type=text]{
-		@extend %text-input
+		@extend %text-input;
+
+		appearance: textfield;
 	}
 
 	&[type=email]{
-		@extend %text-input
+		@extend %text-input;
 	}
 	
 	&[type=date]{
-		@extend %text-input
+		@extend %text-input;
+
+		&::-webkit-calendar-picker-indicator{
+			filter: invert(100%);
+		}
+	}
+
+	&[type=color]{
+		@extend %text-input;
+		height: 48px;
+		width: 250px;
 	}
 
 	&[type=range]{
@@ -107,13 +119,12 @@ input{
 	background: none;
 	font-size: 18px;
 	padding: 10px;
-	width: calc(100% - 44px);
 	border: 2px solid lighten(var.$background-color, 18%);
 	color: lighten(var.$background-color, 60%);
 	border-radius: 4px;
 	display: block;
 	margin: 20px 0 10px 0;
-	appearance: textfield;
+	min-width: 250px;
 
 	&:disabled{
 		border: 2px solid darken(var.$background-color, 3%);
