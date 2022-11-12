@@ -52,7 +52,7 @@ input{
 				background: lighten(var.$background-color, 18%);
 			}
 
-			+ label {
+			@at-root label:has(&) {
 				color: lighten(var.$background-color, 18%);
 			}
 		}
@@ -67,14 +67,11 @@ input{
 			outline: 2px solid var.$background-color;
 		}
 
-		+ label {
+		@at-root label:has(&) {
 			color: lighten(var.$background-color, 60%);
-			vertical-align: middle;
-			text-align: center;
-			float: right;
-			padding: 8px 0;
-			width: 35px;
-			font-size: 14px;
+			display: block;
+			padding:  0;
+			font-size: 16px;
 			font-weight: normal;
 		}
 	}

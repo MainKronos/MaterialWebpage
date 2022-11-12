@@ -123,9 +123,10 @@ input[type=range]:disabled {
 input[type=range]:disabled::-webkit-slider-thumb {
   background: #4f4f4f;
 }
-input[type=range]:disabled + label {
+label:has(input[type=range]:disabled) {
   color: #4f4f4f;
 }
+
 input[type=range]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
@@ -135,16 +136,14 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
   outline: 2px solid #212121;
 }
-input[type=range] + label {
+label:has(input[type=range]) {
   color: #bababa;
-  vertical-align: middle;
-  text-align: center;
-  float: right;
-  padding: 8px 0;
-  width: 35px;
-  font-size: 14px;
+  display: block;
+  padding: 0;
+  font-size: 16px;
   font-weight: normal;
 }
+
 input[type=file] {
   opacity: 0;
   width: 0;

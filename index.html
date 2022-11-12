@@ -47,12 +47,15 @@
 								radio_disabled
 								<span></span>
 							</label>	
-							
-							<input type="range" id="ScanDelay2" name="ScanDelay2" min="30" max="300" value="30" step="15" oninput="this.nextElementSibling.innerText=this.value">
-							<label for="ScanDelay2">30</label>
-			
-							<input type="range" id="ScanDelay" name="ScanDelay" min="30" max="300" value="30" step="15" oninput="this.nextElementSibling.innerText=this.value" disabled>
-							<label for="ScanDelay">30</label>							
+
+							<label for="ScanDelay2">
+								<input type="range" id="ScanDelay2" name="ScanDelay2" min="30" max="300" value="30" step="15" oninput="this.nextElementSibling.innerText=this.value">
+								30
+							</label>
+							<label for="ScanDelay">
+								<input type="range" id="ScanDelay" name="ScanDelay" min="30" max="300" value="30" step="15" oninput="this.nextElementSibling.innerText=this.value" disabled>
+								30
+							</label>							
 
 							<input type="number" name="number" id="number" placeholder="1" min="0" step="1" >
 							<label for="number">number</label>
